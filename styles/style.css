@@ -1,5 +1,4 @@
 /* General styles */
-
 * {
   margin: 0;
   font-family: "Work Sans", sans-serif;
@@ -168,6 +167,21 @@ footer {
   border-radius: 5px;
   padding: 30px 35px 10px;
 }
+
+/* animation */
+.numbers img {
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* sponsors */
 .sponsors-text {
   text-align: center;
