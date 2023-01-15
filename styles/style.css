@@ -59,6 +59,11 @@ nav li {
   width: 100%;
 }
 /* main part starts */
+main,
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 /* images and text side by side */
 
@@ -136,11 +141,59 @@ nav li {
   padding: 30px;
   position: absolute;
   left: -50px;
-  bottom: -120px;
+  bottom: -80px;
 }
 .experience h1 {
   font-size: 65px;
 }
 .e-small {
   font-size: 25px;
+}
+/* facts section */
+.facts p {
+  color: #727272;
+  margin: 24px auto 100px;
+}
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 125px;
+}
+.numbers > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff900e;
+  border-radius: 5px;
+  padding: 30px 35px 10px;
+}
+/* sponsors */
+.sponsors-text {
+  text-align: center;
+}
+.sponsors-text h2 {
+  margin: 180px 0 24px 0;
+  font-size: 45px;
+}
+.sponsors-text p {
+  font-size: 16px;
+  color: #727272;
+  margin-bottom: 50px;
+}
+.sponsors-image > figure {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 155px;
+  filter: grayscale(100%);
+}
+/* footer */
+footer > p {
+  height: 100px;
+  background-color: #fff4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 130px auto 216px auto;
 }
