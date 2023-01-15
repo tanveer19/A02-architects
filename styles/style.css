@@ -211,3 +211,43 @@ footer > p {
   align-items: center;
   margin: 130px auto 216px auto;
 }
+footer h2 {
+  font-size: 50px;
+  text-align: center;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+.social-media li {
+  list-style-type: none;
+}
+/* for mobile */
+@media screen and (max-width: 576px) {
+  nav ul {
+    display: block;
+  }
+  nav h3 {
+    margin-left: 20px;
+  }
+  .quick-list-text {
+    display: none;
+  }
+  .quick-list figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: end;
+  }
+  .numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+  }
+  .sponsors-image > figure {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+  }
+}
