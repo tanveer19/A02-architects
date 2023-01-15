@@ -35,7 +35,8 @@ nav li {
   font-size: 16px;
   margin: 30px 0;
 }
-.banner button {
+.banner button,
+.quick-list-text button {
   margin-bottom: 50px;
   font-size: 20px;
   color: white;
@@ -52,13 +53,44 @@ nav li {
   margin-top: 205px;
   padding-bottom: 45px;
 }
-.banner img {
+.banner img,
+.quick-list img {
   width: 100%;
 }
 /* main part starts */
+
+/* images and text side by side */
+
+.quick-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-top: 85px;
+}
+
+/* images in 2 columns */
+
 .quick-list figure {
   display: grid;
-  grid-template-columns: repeat(2, 342px);
+  grid-template-columns: repeat(2, auto);
+  justify-content: end;
   gap: 24px;
-  margin-top: 85px;
+}
+.quick-list-text {
+  max-width: 537px;
+  margin-left: 73px;
+}
+.quick-list-text h2 {
+  font-size: 45px;
+  color: #727272;
+}
+.quick-list-text p {
+  color: #727272;
+  margin: 30px auto;
+}
+.black {
+  color: #131313;
+}
+.orange {
+  color: #ff900e;
 }
