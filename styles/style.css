@@ -231,15 +231,30 @@ footer {
 
 /* animation */
 .numbers img {
+  position: relative;
   animation: roll 3s infinite;
-  transform: rotate(30deg);
 }
 @keyframes roll {
   0% {
-    transform: rotate(0);
+    left: 0px;
+    top: 0;
+  }
+  25% {
+    left: 40px;
+    /* transform: rotate(30deg); */
+  }
+  50% {
+    left: 0;
+    /* transform: rotate(0); */
+  }
+  75% {
+    left: -40px;
+    /* transform: rotate(-30deg); */
   }
   100% {
-    transform: rotate(360deg);
+    left: 0;
+
+    /* transform: rotate(360deg); */
   }
 }
 
