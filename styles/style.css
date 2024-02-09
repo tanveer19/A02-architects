@@ -275,7 +275,7 @@ footer {
 
 :root {
   --marquee-width: 80vw;
-  --marquee-height: 20vh;
+  --marquee-height: 10vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(
@@ -284,13 +284,87 @@ footer {
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
+.sponsors-image {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  /* background-color: #111; */
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+.sponsors-image:before,
+.sponsors-image:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.sponsors-image:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+.sponsors-image:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
 .sponsors-image > figure {
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
+    );
+  }
+}
+.sponsors-image > figure > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-shrink: 0; */
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height) * 3 / 4);
+  white-space: nowrap;
+}
+
+.sponsors-image > figure > img {
+  width: 100%;
+  border: 2px solid #eee;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .sponsors-image:before,
+  .sponsors-image:after {
+    width: 5rem;
+  }
+}
+/* .sponsors-image > figure {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4%;
   filter: grayscale(100%);
-}
+} */
+
 /* footer */
 footer > p {
   height: 100px;
