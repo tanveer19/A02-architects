@@ -182,7 +182,7 @@
             the majority have suffered alteration.
           </p>
         </article>
-        <article class="sponsors-image marquee">
+        <!-- <article class="sponsors-image">
           <figure>
             <img src="images/spotify.png" alt="spotify" />
             <img src="images/amazon.png" alt="amazon" />
@@ -190,10 +190,17 @@
             <img src="images/telerama.png" alt="telerama" />
             <img src="images/figma.png" alt="figma" />
           </figure>
-        </article>
-        <!-- <ul class="marquee-content">
+        </article> -->
 
-        </ul> -->
+        <div class="marquee">
+          <ul class="marquee-content">
+            <li><img src="images/spotify.png" alt="spotify" /></li>
+            <li><img src="images/amazon.png" alt="amazon" /></li>
+            <li><img src="images/google.png" alt="google" /></li>
+            <li><img src="images/telerama.png" alt="telerama" /></li>
+            <li><img src="images/figma.png" alt="figma" /></li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>
@@ -214,7 +221,7 @@
       const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
         "--marquee-elements-displayed"
       );
-      const marqueeContent = document.querySelector(".sponsors-image figure");
+      const marqueeContent = document.querySelector("ul.marquee-content");
 
       root.style.setProperty(
         "--marquee-elements",
