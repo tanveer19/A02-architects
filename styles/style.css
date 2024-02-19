@@ -1,65 +1,7 @@
-/* 
-CSS reset from https://www.joshwcomeau.com/css/custom-css-reset/
- */
-
-/* 1. Use a more-intuitive box-sizing model. */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
-
-/* Typographic tweaks! 
-3. Add accessible line-height 
-4. Improve text rendering */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* 5. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 6. Remove built-in form typography styles */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Create a root stacking context */
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* General styles */
-* {
+body {
   font-family: "Work Sans", sans-serif;
+  margin: 0;
 }
 
 /* header styles */
@@ -114,13 +56,12 @@ nav li {
 .quick-list img,
 .features img {
   width: 100%;
-  filter: grayscale();
-  opacity: 0.1;
+  /* filter: grayscale(); */
+  /* opacity: 0.1; */
 }
 /* main part starts */
 main,
 footer {
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -205,12 +146,19 @@ footer {
   bottom: -80px;
 }
 .experience h1 {
-  font-size: 65px;
+  font-size: 3rem;
 }
 .e-small {
   font-size: 25px;
 }
 /* facts section */
+.facts {
+  max-width: 1440px;
+  /* display: grid; */
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin: 130px auto 130px;
+}
 .facts p {
   color: #727272;
   margin: 24px auto 100px;
@@ -276,8 +224,8 @@ footer {
 /* sponsors-image or Marquee */
 
 :root {
-  --marquee-width: 80vw;
-  --marquee-height: 10vh;
+  --marquee-width: 99vw;
+  --marquee-height: 20vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(
@@ -294,7 +242,7 @@ footer {
   overflow: hidden;
   position: relative;
 }
-.marquee:before,
+/* .marquee:before,
 .marquee:after {
   position: absolute;
   top: 0;
@@ -310,16 +258,16 @@ footer {
 .marquee:after {
   right: 0;
   background: linear-gradient(to left, #111 0%, transparent 100%);
-}
+} */
 .marquee-content {
   list-style: none;
   height: 100%;
   display: flex;
   animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
-/* .marquee-content:hover {
+.marquee-content:hover {
   animation-play-state: paused;
-} */
+}
 @keyframes scrolling {
   0% {
     transform: translateX(0);
@@ -342,12 +290,6 @@ footer {
   white-space: nowrap;
 }
 
-.marquee-content li img {
-  width: 100%;
-  /* height: 100%; */
-  /* border: 2px solid #eee; */
-}
-
 @media (max-width: 600px) {
   html {
     font-size: 12px;
@@ -355,7 +297,7 @@ footer {
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
-    --marquee-elements-displayed: 3;
+    --marquee-elements-displayed: 2;
   }
   .marquee:before,
   .marquee:after {
@@ -371,7 +313,7 @@ footer > p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 130px auto 216px auto;
+  margin: 100px auto 50px auto;
 }
 footer h2 {
   font-size: 50px;
