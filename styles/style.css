@@ -17,6 +17,7 @@ nav {
   display: flex;
   padding-top: 60px;
   justify-content: space-around;
+  align-items: center;
 }
 nav ul {
   display: flex;
@@ -49,7 +50,7 @@ nav li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 205px;
+  margin-top: 150px;
   padding-bottom: 45px;
 }
 .banner img,
@@ -221,7 +222,6 @@ footer {
   color: #727272;
   margin-bottom: 50px;
 }
-/* sponsors-image or Marquee */
 
 :root {
   --marquee-width: 99vw;
@@ -242,23 +242,7 @@ footer {
   overflow: hidden;
   position: relative;
 }
-/* .marquee:before,
-.marquee:after {
-  position: absolute;
-  top: 0;
-  width: 10rem;
-  height: 100%;
-  content: "";
-  z-index: 1;
-}
-.marquee:before {
-  left: 0;
-  background: linear-gradient(to right, #111 0%, transparent 100%);
-}
-.marquee:after {
-  right: 0;
-  background: linear-gradient(to left, #111 0%, transparent 100%);
-} */
+
 .marquee-content {
   list-style: none;
   height: 100%;
@@ -297,7 +281,7 @@ footer {
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
-    --marquee-elements-displayed: 2;
+    --marquee-elements-displayed: 1.5;
   }
   .marquee:before,
   .marquee:after {
